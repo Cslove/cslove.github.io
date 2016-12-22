@@ -34,3 +34,6 @@ abbr,acronym {
 html{
     overflow: auto;
 }
+a{
+    text-decoration: none;
+}
