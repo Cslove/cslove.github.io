@@ -1,0 +1,9 @@
+@media screen and (min-device-width:320px) and (max-device-width:1200px){
+	.content-box .content-left .img-box{
+		width: 150px;
+		height: 150px;
+	}
+	.content-box .content-right .search-box .searching{
+		width: 70%;
+	}
+}
