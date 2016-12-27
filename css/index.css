@@ -254,9 +254,30 @@
 	line-height: 40px;
 	width: 100%;
 	height: 100%;
-	padding-left: 20px;
+	padding-left: 10px;
+}
+.content-box .content-right .blog-list-box .blog-list li i{
+	line-height: 40px;
 }
 .content-box .content-right .blog-list-box .blog-list li:hover{
-
+    color:#12919c;
 	background-image:  linear-gradient(to left,#5c5959,#12919c);
+}
+.resume{
+	width: 100%;
+	font-family: "impact";
+	background: #333;
+	margin-top: 30px;
+	color: #c1bcbc;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	box-shadow: 4px 4px 6px #292626; 
+	font-size: 25px;
+	letter-spacing: 5px;
+}
+.resume:hover{
+	background: #12919c;
+	color: #ec7713;
+	cursor: pointer;
 }

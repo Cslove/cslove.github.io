@@ -37,3 +37,7 @@ html{
 a{
     text-decoration: none;
 }
+@font-face{
+    font-family: "impact";
+    src:../font-awesome/Impact.TTF;
+}
