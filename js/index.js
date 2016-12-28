@@ -4,7 +4,8 @@
             $pic=$(".pic-box"),
             $submit=$(".submit"),
             $C_font=$(".blog-list i"),
-            $article=$(".blog-list li");
+            $article=$(".blog-list li"),
+            $resume=$(".resume");
             // 鼠标滑过三角效果
         $li.each(function(i) {
         	$(this).hover(function() {
@@ -26,6 +27,18 @@
                 }, function() {
                         $article[i].style.color="#000";
                 });
+        });
+        //跳转简历页
+        $resume.click(function(event) {
+                var resumeName=prompt("请输入我的姓名：");
+                if (resumeName==="陈胜") {
+                        window.open("resume.html")
+                }else if(resumeName===null){
+                        alert("请输入本人姓名：");
+                }else{
+                alert("对不起··· 你没有权限查看简历！")
+
+                }
         });
         
 })();
