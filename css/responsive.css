@@ -6,4 +6,13 @@
 	.content-box .content-right .search-box .searching{
 		width: 70%;
 	}
+	.resume-content .resume-box .title-box .resume-logo span{
+		font-size: 50px;
+	}
+	.resume-content .resume-box .educ-box .educ-desc p{
+		line-height: 1.5em;
+	}
+	.resume-content .resume-box .introduce p{
+		line-height: 1.7em
+	}
 }
