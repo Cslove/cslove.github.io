@@ -1,6 +1,6 @@
 .resume-content{
 	width: 100%;
-	height: 1200px;
+	height: 1800px;
 	background: #3c3c38;
 }
 .resume-content .resume-box{
@@ -69,7 +69,7 @@
 }
 .resume-content .resume-box #person-desc{
 	width: 100%;
-	height: 270px;
+	height: 260px;
 }
 .resume-content .resume-box #person-desc .desc{
 	float: left;
@@ -96,11 +96,12 @@
 	background: url(../imgs/resume.jpg);
 }
 
-.resume-content .resume-box #education{
+.resume-content .resume-box .education{
 	width: 100%;
 	height: 50px;
+	margin-top: 10px;
 }
-.resume-content .resume-box #education .font-icon{
+.resume-content .resume-box .education .font-icon{
 	float: left;
 	width: 50px;
 	height: 50px;
@@ -108,20 +109,73 @@
 	color: #b22c06;
 	padding-left: 120px;
 }
-.resume-content .resume-box #education .edu-line{
+.resume-content .resume-box .education .edu-line{
 	float: left;
-	width: 80%;
+	width: 75%;
 }
-.resume-content .resume-box #education .edu-line .hr{
+.resume-content .resume-box .education .edu-line .hr{
 	width: 100%;
 	height: 2px;
 	background: #b22c06;
 }
-.resume-content .resume-box #education .edu-line span{
+.resume-content .resume-box .education .edu-line span{
 	display: inline-block;
 	height: 30px;
 	font-weight: bold;
 	font-size: 25px;
 	margin: 8px 20px;
 	color: #b22c06;
+}
+.resume-content .resume-box .educ-box{
+	width: 100%;
+	height: 100px;
+}
+.resume-content .resume-box .educ-box .educ-box2{
+	overflow: hidden;
+	margin-left: 120px;
+
+} 
+.resume-content .resume-box .educ-box .educ-box2 li{
+	float: left;
+	padding-left: 150px;
+	padding-top: 10px;
+	color: #082b00;
+}
+.resume-content .resume-box .educ-box .educ-box2 li:first-child{
+	padding-left: 0;
+}
+.resume-content .resume-box .educ-box .educ-desc{
+	padding-left: 120px;
+	width: 80%;
+	padding-top: 10px;
+}
+.resume-content .resume-box .educ-box .educ-desc p{
+	color: #082b00;
+	line-height: 2em;
+}
+.resume-content .resume-box .work-expre{
+    height: 310px;
+}
+.resume-content .resume-box .certificate{
+	height: 130px;
+}
+.resume-content .resume-box .educ-box .work{
+	padding-left: 120px;
+}
+.resume-content .resume-box .educ-box .work li{
+	padding-top: 10px;
+	color: #082b00;
+}
+.resume-content .resume-box .educ-box .work li i{
+	padding-right: 10px;
+}
+.resume-content .resume-box .introduce{
+	height: 200px;
+
+}
+.resume-content .resume-box .introduce p{
+	width: 70%;
+	padding-left: 120px;
+	color: #082b00;
+	line-height: 2em;
 }
