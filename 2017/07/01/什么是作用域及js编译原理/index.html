@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。 来看一个简单的赋值语句var a=2; 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个var a 看做是在编译器编译时处">
+<meta name="description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="什么是作用域及js编译原理">
 <meta property="og:url" content="http://www.cslove.xyz/2017/07/01/什么是作用域及js编译原理/index.html">
 <meta property="og:site_name" content="Cslove">
-<meta property="og:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。 来看一个简单的赋值语句var a=2; 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个var a 看做是在编译器编译时处">
-<meta property="og:updated_time" content="2017-07-01T01:26:00.500Z">
+<meta property="og:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
+<meta property="og:updated_time" content="2017-07-01T05:52:51.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="什么是作用域及js编译原理">
-<meta name="twitter:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。 来看一个简单的赋值语句var a=2; 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个var a 看做是在编译器编译时处">
+<meta name="twitter:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
 
 
 
@@ -354,9 +354,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/01/什么是作用域及js编译原理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/01/什么是作用域及js编译原理/" itemprop="commentCount"></span>
+                <a class="cloud-tie-join-count" href="/2017/07/01/什么是作用域及js编译原理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -392,8 +391,7 @@
       
 
       
-        <p>每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。</p>
-<p>来看一个简单的赋值语句<code>var a=2;</code> 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个<code>var a</code> 看做是在编译器编译时处理，一个是<code>a=2</code> 在引擎运行时处理。通俗的话在概括下就是：为一个变量分配内存，将其命名为a，然后将值2保存进这个变量。当然在编译阶段还有很多任务要做，比如还要查看当前作用域是否声明过此变量等一系列问题。</p>
+        <p>每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。<br><a id="more"></a><br>来看一个简单的赋值语句<code>var a=2;</code> 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个<code>var a</code> 看做是在编译器编译时处理，一个是<code>a=2</code> 在引擎运行时处理。通俗的话在概括下就是：为一个变量分配内存，将其命名为a，然后将值2保存进这个变量。当然在编译阶段还有很多任务要做，比如还要查看当前作用域是否声明过此变量等一系列问题。</p>
 <p>来看一下如下简单代码：</p>
 <pre><code>var a=2;
 console.log(a);
@@ -451,22 +449,6 @@ foo(2);   //4
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/06/29/我的第一篇文章/" rel="next" title="我的第一篇文章">
-                <i class="fa fa-chevron-left"></i> 我的第一篇文章
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
 
       
       
@@ -488,12 +470,7 @@ foo(2);   //4
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -532,7 +509,7 @@ foo(2);   //4
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -704,26 +681,6 @@ foo(2);   //4
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://cslove.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://www.cslove.xyz/2017/07/01/什么是作用域及js编译原理/';
-          this.page.identifier = '2017/07/01/什么是作用域及js编译原理/';
-          this.page.title = '什么是作用域及js编译原理';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://cslove.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
 
   
 
