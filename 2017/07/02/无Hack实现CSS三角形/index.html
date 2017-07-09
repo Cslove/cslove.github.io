@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="HTML/CSS," />
 
 
 
@@ -93,19 +93,21 @@
 
 
 
-<meta name="description" content="闭包这个东西让我理解了好久，也算是理解javascript语言比较重要的一个环节吧，在这做一个自我思考的详细总结~，有错误望指正~ 首先要说明的是闭包在你的代码中随处可见，可能不知不觉的你正在写闭包~，只是你不认识它，不了解它，现在我们揭开它的面纱来瞧瞧它的真面目。">
-<meta name="keywords" content="javascript">
+<meta name="description" content="在使用HTML/CSS编写页面的人都知道，为了创建一个只有CSS的三角形或者那些带有尖尖形状的元素都需要一些hack写法，典型两种比较受欢迎的解决方案就是充分使用border属性和使用Unicode字符。在这里我们先讲解下使用border属性怎样实现CSS三角形。">
+<meta name="keywords" content="HTML&#x2F;CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭包这个玩意">
-<meta property="og:url" content="http://www.cslove.xyz/闭包这个玩意.html">
+<meta property="og:title" content="无Hack实现CSS三角形">
+<meta property="og:url" content="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/index.html">
 <meta property="og:site_name" content="Cslove">
-<meta property="og:description" content="闭包这个东西让我理解了好久，也算是理解javascript语言比较重要的一个环节吧，在这做一个自我思考的详细总结~，有错误望指正~ 首先要说明的是闭包在你的代码中随处可见，可能不知不觉的你正在写闭包~，只是你不认识它，不了解它，现在我们揭开它的面纱来瞧瞧它的真面目。">
-<meta property="og:image" content="http://www.cslove.xyz/闭包这个玩意.html/bibao.jpg">
-<meta property="og:updated_time" content="2017-07-09T01:12:00.748Z">
+<meta property="og:description" content="在使用HTML/CSS编写页面的人都知道，为了创建一个只有CSS的三角形或者那些带有尖尖形状的元素都需要一些hack写法，典型两种比较受欢迎的解决方案就是充分使用border属性和使用Unicode字符。在这里我们先讲解下使用border属性怎样实现CSS三角形。">
+<meta property="og:image" content="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/css.png">
+<meta property="og:image" content="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/border.png">
+<meta property="og:image" content="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/lizi.png">
+<meta property="og:updated_time" content="2017-07-02T06:41:03.880Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闭包这个玩意">
-<meta name="twitter:description" content="闭包这个东西让我理解了好久，也算是理解javascript语言比较重要的一个环节吧，在这做一个自我思考的详细总结~，有错误望指正~ 首先要说明的是闭包在你的代码中随处可见，可能不知不觉的你正在写闭包~，只是你不认识它，不了解它，现在我们揭开它的面纱来瞧瞧它的真面目。">
-<meta name="twitter:image" content="http://www.cslove.xyz/闭包这个玩意.html/bibao.jpg">
+<meta name="twitter:title" content="无Hack实现CSS三角形">
+<meta name="twitter:description" content="在使用HTML/CSS编写页面的人都知道，为了创建一个只有CSS的三角形或者那些带有尖尖形状的元素都需要一些hack写法，典型两种比较受欢迎的解决方案就是充分使用border属性和使用Unicode字符。在这里我们先讲解下使用border属性怎样实现CSS三角形。">
+<meta name="twitter:image" content="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/css.png">
 
 
 
@@ -133,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cslove.xyz/闭包这个玩意.html"/>
+  <link rel="canonical" href="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/"/>
 
 
 
 
 
-  <title>闭包这个玩意 | Cslove</title>
+  <title>无Hack实现CSS三角形 | Cslove</title>
   
 
 
@@ -312,7 +314,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cslove.xyz/闭包这个玩意.html">
+    <link itemprop="mainEntityOfPage" href="http://www.cslove.xyz/2017/07/02/无Hack实现CSS三角形/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cslove">
@@ -329,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">闭包这个玩意</h1>
+          <h1 class="post-title" itemprop="name headline">无Hack实现CSS三角形</h1>
         
 
         <div class="post-meta">
@@ -341,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-09T08:55:53+08:00">
-                2017-07-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T13:26:11+08:00">
+                2017-07-02
               </time>
             
 
@@ -382,7 +384,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/闭包这个玩意.html#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/07/02/无Hack实现CSS三角形/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -391,7 +393,7 @@
 
           
           
-             <span id="/闭包这个玩意.html" class="leancloud_visitors" data-flag-title="闭包这个玩意">
+             <span id="/2017/07/02/无Hack实现CSS三角形/" class="leancloud_visitors" data-flag-title="无Hack实现CSS三角形">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,7 +418,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  915
+                  642
                 </span>
               
 
@@ -432,7 +434,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -450,20 +452,14 @@
       
 
       
-        <img src="/闭包这个玩意.html/bibao.jpg" alt="闭包这个玩意" title="闭包这个玩意">
-<p>闭包这个东西让我理解了好久，也算是理解javascript语言比较重要的一个环节吧，在这做一个自我思考的详细总结~，有错误望指正~</p>
-<p>首先要说明的是闭包在你的代码中随处可见，可能不知不觉的你正在写闭包~，只是你不认识它，不了解它，现在我们揭开它的面纱来瞧瞧它的真面目。<br><a id="more"></a></p>
-<p>先说下闭包直截了当的定义，我也是在网上查了下：<strong>当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行</strong>来看下代码:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fee</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a);</div><div class="line">	&#125;</div><div class="line">	fee();</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
-<p>这段代码应该很好懂了，我们是不是也经常在写，fee函数可以访问foo作用域内的变量a，但上面那个是闭包吗，严格来说不算是，闭包总是隐藏在代码之后的，他总是不那么容易发现。看如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fee</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> fee;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> b=foo();</div><div class="line">b();  <span class="comment">//2</span></div></pre></td></tr></table></figure><br>上面的代码就是所谓的闭包，我们将fee函数当成一个值类型进行传递，然后在外界通过调用foo函数在给b，通过不同的标识符引用调用了内部的函数fee（）。而且fee函数 也在作用域之外被执行了，也符合上面的定义。</p>
-<p>闭包的神奇之处在阻止作用域被销毁，看上面的代码，看上去foo的内容不会再调用，其实内部 的fee函数拥有它的作用域闭包，使得该作用域能一直存活，以便fee能在任何时间引用。</p>
-<p>从上面的代码我觉得最重要的一点就是，可以对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fee</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a);</div><div class="line">	&#125;</div><div class="line">	boo(fee);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">boo</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">	fn();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>上面也是一种闭包，将fee函数当成参数值传递到boo中，然后在外界的boo函数中执行了它，当然也能访问到a了。在看下面的形式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fn;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">fee</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a);</div><div class="line">	&#125;</div><div class="line">	fn=fee;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">boo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	fn();</div><div class="line">&#125;;</div><div class="line">foo();</div><div class="line">boo(); <span class="comment">//2</span></div></pre></td></tr></table></figure><br>上面的也是闭包，无论通过何种手段将内部函数传递到所在的词法作用域以外，他都会持有对原始定义作用域的引用，无论在何处执行这个函数都会使用闭包。</p>
-<p>现在我们可以发现闭包在我们的程序中到处可见了吧，比如下面的那个：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">	setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(a);</div><div class="line">	&#125;,<span class="number">1000</span>)</div><div class="line">&#125; </div><div class="line">foo(<span class="number">1</span>);  <span class="comment">//1秒后打印1</span></div></pre></td></tr></table></figure><br>将一个timer函数当为参数传递给了setTimeout内，timer具有涵盖foo作用域的闭包，因此能访问到a。</p>
-<p>so ，这就是闭包！在javascript中到处可见，定时器，时间监听器，Ajax请求，或者其他异步请求的回调函数就是在使用闭包！</p>
-<p>我们在看下立即执行函数（可以看我的这篇文章：<a href="http://blog.csdn.net/cslove9/article/details/53981314" target="_blank" rel="external">js函数作用域与块作用域</a>）：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(a);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure><br>这个是不是闭包呢，我觉得不严格是，因为它不是在词法作用域之外执行的，在定义时就执行了，不过它确实是访问了a，也就是创建了闭包，它也常常是创建可以被封闭起来的工具。</p>
-<p>闭包在循环中也有很大的应用，es6中的模块机制也都是使用闭包。</p>
+        <img src="/2017/07/02/无Hack实现CSS三角形/css.png" alt="CSS Triangles" title="CSS Triangles">
+<p>在使用HTML/CSS编写页面的人都知道，为了创建一个只有CSS的三角形或者那些带有尖尖形状的元素都需要一些hack写法，典型两种比较受欢迎的解决方案就是充分使用border属性和使用Unicode字符。在这里我们先讲解下使用border属性怎样实现CSS三角形。<br><a id="more"></a></p>
+<h2 id="border属性"><a href="#border属性" class="headerlink" title="border属性"></a>border属性</h2><p>我们先来看下用这个方式所实现的代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"triangle-up"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#triangle-up</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent;</div><div class="line">  <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>以上代码运行的结果是这样的：<img src="/2017/07/02/无Hack实现CSS三角形/border.png" alt="border.png" title="">充分利用了border属性，我们知道设置border时它的边框是以45°角相互对接的，就像这样：<img src="/2017/07/02/无Hack实现CSS三角形/lizi.png" alt="lizi.png" title=""><br>首先设置了其content宽高为0，不用设置上边框，设置底部边框一个长度，然后就是设置左右边框的宽度为底部的一半并设置左右边框颜色透明，得到了一个等腰三角形。具体原理可以看<a href="https://stackoverflow.com/questions/7073484/how-do-css-triangles-work" target="_blank" rel="external">这里</a>。</p>
+<p>可以看到使用这些hack写法太死板了，很不灵活，例如我们不能设置三角形的颜色，因为其内容宽高为0.接下来我们来看下无hack实现CSS三角形。</p>
+<h2 id="Clip-path"><a href="#Clip-path" class="headerlink" title="Clip-path"></a>Clip-path</h2><p>Clip-path是CSS规范中的一个新的补充，它允许我们只显示一部分元素并隐藏其余元素。我们来看下它的工作原理：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">background</span>: red;</div><div class="line"></div><div class="line">    <span class="comment">/* The points are: centered top, left bottom, right bottom */</span></div><div class="line">    <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(50% 0, 0 100%, 100% 100%);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>显示结果形状与上栗一样，可以看到我们需要一个polygon函数，要实现三角形需要三个点，我们先指定了div的宽高，这也是其重点，因为这样内容区域背景色我们就可以随心定制自己想要的，甚至也可以是图片。接下来可以看到在clip-path属性上调用polygon函数并给出了三个点的坐标，即三角形的上顶点和下面左右点的坐标，在图形定制方面就更加灵活了，我们可以实现各种各样的形状，拥有强大的灵活性。想要更多的形状实现可以参考<a href="http://bennettfeely.com/clippy/" target="_blank" rel="external">这里</a></p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>这个属性在Chrome中完美支持，ie就不用说了，并不支持，期待IE的未来吧。Safari需要使用-webkit-前缀，Firefox用户必须等到版本53。</p>
+<blockquote><p></p><p>更多内容请看这里<br></p>
+<footer><strong>Danny Markov</strong><cite><a href="https://tutorialzine.com/2017/03/css-triangles-without-hacks" target="_blank" rel="external">https://tutorialzine.com/2017/03/css-triangles-without-hacks</a></cite></footer></blockquote><p></p>
 
       
     </div>
@@ -514,7 +510,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/HTML-CSS/" rel="tag"># HTML/CSS</a>
           
         </div>
       
@@ -527,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/大三期末的总结：改变是一堂必修课.html" rel="next" title="大三期末的思考：改变是一堂必修课~">
-                <i class="fa fa-chevron-left"></i> 大三期末的思考：改变是一堂必修课~
+              <a href="/2017/07/01/什么是作用域及js编译原理/" rel="next" title="什么是作用域及js编译原理">
+                <i class="fa fa-chevron-left"></i> 什么是作用域及js编译原理
               </a>
             
           </div>
@@ -536,6 +532,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/03/大三期末的总结：改变是一堂必修课/" rel="prev" title="大三期末的思考：改变是一堂必修课~">
+                大三期末的思考：改变是一堂必修课~ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -590,8 +590,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/tx.jpg"
@@ -606,7 +615,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -673,6 +682,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#border属性"><span class="nav-number">1.</span> <span class="nav-text">border属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clip-path"><span class="nav-number">2.</span> <span class="nav-text">Clip-path</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器支持"><span class="nav-number">3.</span> <span class="nav-text">浏览器支持</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

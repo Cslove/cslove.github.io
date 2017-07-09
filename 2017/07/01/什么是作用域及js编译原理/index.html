@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -93,21 +93,17 @@
 
 
 
-<meta name="description" content="唉呀妈呀，转眼就要大四了~意味着16年的学生生涯即将终止！啊？还有研究生涯呢！额…抱歉~我不打算考研^O^不过回忆大学这三年觉得“改变”真的是一堂必修课！">
+<meta name="description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大三期末的思考：改变是一堂必修课~">
-<meta property="og:url" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html">
+<meta property="og:title" content="什么是作用域及js编译原理">
+<meta property="og:url" content="http://www.cslove.xyz/2017/07/01/什么是作用域及js编译原理/index.html">
 <meta property="og:site_name" content="Cslove">
-<meta property="og:description" content="唉呀妈呀，转眼就要大四了~意味着16年的学生生涯即将终止！啊？还有研究生涯呢！额…抱歉~我不打算考研^O^不过回忆大学这三年觉得“改变”真的是一堂必修课！">
-<meta property="og:image" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html/change.jpg">
-<meta property="og:image" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html/huiyi.jpg">
-<meta property="og:image" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html/fenshou.jpg">
-<meta property="og:image" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html/cs.jpg">
-<meta property="og:updated_time" content="2017-07-03T09:09:10.618Z">
+<meta property="og:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
+<meta property="og:updated_time" content="2017-07-01T06:48:45.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大三期末的思考：改变是一堂必修课~">
-<meta name="twitter:description" content="唉呀妈呀，转眼就要大四了~意味着16年的学生生涯即将终止！啊？还有研究生涯呢！额…抱歉~我不打算考研^O^不过回忆大学这三年觉得“改变”真的是一堂必修课！">
-<meta name="twitter:image" content="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html/change.jpg">
+<meta name="twitter:title" content="什么是作用域及js编译原理">
+<meta name="twitter:description" content="每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。">
 
 
 
@@ -135,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html"/>
+  <link rel="canonical" href="http://www.cslove.xyz/2017/07/01/什么是作用域及js编译原理/"/>
 
 
 
 
 
-  <title>大三期末的思考：改变是一堂必修课~ | Cslove</title>
+  <title>什么是作用域及js编译原理 | Cslove</title>
   
 
 
@@ -314,7 +310,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cslove.xyz/大三期末的总结：改变是一堂必修课.html">
+    <link itemprop="mainEntityOfPage" href="http://www.cslove.xyz/2017/07/01/什么是作用域及js编译原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cslove">
@@ -331,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大三期末的思考：改变是一堂必修课~</h1>
+          <h1 class="post-title" itemprop="name headline">什么是作用域及js编译原理</h1>
         
 
         <div class="post-meta">
@@ -343,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T16:44:35+08:00">
-                2017-07-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T09:20:31+08:00">
+                2017-07-01
               </time>
             
 
@@ -366,8 +362,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">生活随笔</span>
+                  <a href="/categories/技术文章/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文章</span>
                   </a>
                 </span>
 
@@ -384,7 +380,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/大三期末的总结：改变是一堂必修课.html#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/07/01/什么是作用域及js编译原理/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -393,7 +389,7 @@
 
           
           
-             <span id="/大三期末的总结：改变是一堂必修课.html" class="leancloud_visitors" data-flag-title="大三期末的思考：改变是一堂必修课~">
+             <span id="/2017/07/01/什么是作用域及js编译原理/" class="leancloud_visitors" data-flag-title="什么是作用域及js编译原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,7 +414,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,220
+                  891
                 </span>
               
 
@@ -434,7 +430,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -452,13 +448,25 @@
       
 
       
-        <img src="/大三期末的总结：改变是一堂必修课.html/change.jpg" alt="图片取自互联网" title="图片取自互联网">
-<p>唉呀妈呀，转眼就要大四了~意味着16年的学生生涯即将终止！啊？还有研究生涯呢！额…抱歉~我不打算考研^O^不过回忆大学这三年觉得“改变”真的是一堂必修课！<br><a id="more"></a><br>最近打LOL和一妹子开黑，额…不能说是妹子！算是个小学姐吧~因为她比我大一届，是今年毕业的。在开黑语音聊天问到她大学谈没谈过恋爱时，她就开始了独属于她的那段珍贵的回忆…<br><img src="/大三期末的总结：改变是一堂必修课.html/huiyi.jpg" alt="huiyi.jpg" title=""><br>她有个亲哥哥，所以从小就很受宠。在现在这个年代里，被从小惯到大多少有点公主病的。只是没想到她的公主病有点严重…她大学里谈了两次恋爱，第一次在大一有一个男生追的她，大一嘛，都是懵懂无知的小崽子，初尝到恋爱滋味了就陷得无法自拔了~不过越往后她的公主病来了，好像男方必须做什么事都得围着她转，尤其她说的一个情景让我很吃惊。她带着她的男友和舍友们一起出去吃饭，仅仅因为男方没有帮她打开筷子，直接拿起包走了，留下一桌尴尬的人…不久她提出了分手~</p>
-<p>第二次恋爱是她追的一个男生，对于这个男生倒没听她多说什么，不过我觉得他应该是个暖男，因为他对她很好，而这也刚好符合她。她们相处了两年分了……听她说是因为男方对她的宠使得她的公主病病到不可收拾的地步，任何一件事只要不符合她的意愿就会找架吵。在大三暑假尤其吵得凶，最后她赌气说分手，结果就真分了…她怎么会去挽留？而男方也许也已到了极致了。在这之后的时间里她很痛苦，有过后悔说分手，公主病尤其到了极致…就因为舍友忘了帮她打水，她一周都没跟那位舍友说话！所有人都不敢和她交流了。<br><img src="/大三期末的总结：改变是一堂必修课.html/fenshou.jpg" alt="分手" title="分手"></p>
-<p>在那之后的日子里，她开始思考了，思考自己的问题所在，思考自己往后的人生。其实和她第一次语音开黑时听声音觉得对方是个挺活泼健谈的女孩，谁可知那是改变以后的她。毕业的那几天她舍友说她是改变最大的那个，她也说很感谢当初那个促使她改变的那个人，那个她第二次恋爱的人。对于未来她充满了斗志，一个人去了上海打拼找工作，回到家她妈妈还催她以后要找个什么样男友，她却霸道的对我说30岁了都不急，我自己能养活自己何必找个男的呢…</p>
-<p>改变~就在你的一念之间。或许你会说只有经历了重大变故的人才能彻彻底底改变，就比如上面的她？不可否认，我也觉得当一个人受到极大的刺激才能彻底的改变，可我们都只是个正常人，做着正常的事而已，哪来的变故与刺激使我们彻底改变？但亲爱的，我们为什么要彻底的改变？我们可不可以学着从一件小事改变呢，或者改变一些小习惯呢。例如，每天玩王者荣耀是你必须做的，那你能不能试着改变下做到每天只玩1个小时，剩下的原来游戏时间试着去写篇文章或者画一幅画？改变就在你的一念之间，或许这一念之间是最困难的，很自然的我们会被正在做的事忘记时间，忘记自我。等到最后才发出一声长叹，哎嘘~又浪费了这么长的时间。所以，可以的话给你的手机设个闹钟提醒自己时间到了，是时候该做出改变了~<br><img src="/大三期末的总结：改变是一堂必修课.html/cs.jpg" alt="改变从现在开始~" title="改变从现在开始~"></p>
-<p>哎嘘，感觉说了挺多废话的。说是容易，做的话难于上青天~不过以我现有的观察来看，当一个人做出改变时往往是自己独处的时候。海蓝博士也说过当你有情绪的时候，找一个安静的地方放松自己与自己进行对话并以实际行动解决当下。长写文章就是个与自己对话的好方式~写到这我也觉得该时常更新我的博客了！不管怎样，最主要是为了在内心遇见更好的自己~</p>
-<p>大三期末总结至此over~都说出了社会我们会变成自己所讨厌的那种人，期待ing~</p>
+        <p>每个程序语言都会有对变量的使用，会对这个变量就行赋值修改等操作。那么问题来了，这些变量都存在哪里，怎样对它进行查找并读取呢？显然，我们必须定义一套规则来操作这些变量简单的进行读取和存储，而这套规则应该就是作用域了。<br><a id="more"></a><br>来看一个简单的赋值语句<code>var a=2;</code> 大多数人会认为这是一个声明变量并赋值而已，事实也确实如此，而要强调的是电脑中的引擎会将它认为是两个声明，第一个<code>var a</code> 看做是在编译器编译时处理，一个是<code>a=2</code> 在引擎运行时处理。通俗的话在概括下就是：为一个变量分配内存，将其命名为a，然后将值2保存进这个变量。当然在编译阶段还有很多任务要做，比如还要查看当前作用域是否声明过此变量等一系列问题。</p>
+<p>来看一下如下简单代码：</p>
+<pre><code>var a=2;
+console.log(a);
+</code></pre><p>引擎是如何处理这段代码的呢？在当前作用域（当前也就是全局作用域）中，引擎会为变量a进行LHS查询和RHS查询。上面的代码<code>var a=2;</code> 会对a进行LHS查询，LHS查询也就是赋值操作的目标是谁。<code>console.log(a)</code> 中会对a进行RHS查询，可以这样理解RHS查询：谁是赋值操作的源头，也就是说这个变量a的源头是谁（值是谁），这里明显就是2了。</p>
+<p>为什么要区分LHS和RHS查询呢？因为在变量还为声明的时候，这两种查询的行为不一样。来看如下代码：</p>
+<pre><code>function foo(a){
+    console.log(b);    //ReferenceError
+}
+foo(2);
+</code></pre><p>可以看到在对b进行RHS查询时，变量b并未声明，此时引擎在当前作用域未找到变量b，然后会在外层作用域查找（此时为全局作用域），外层作用域都没有此变量，就会发生常见的ReferenceError。</p>
+<p>而在看LHS查询，当LHS查询在此作用域和外层作用域都没有查找到此变量，全局作用域就会自动创建一个此变量，前提是在非严格模式下，如果在严格模式下会报ReferenceError。在ES5中引入的严格模式与正常模式相比在行为上有许多的不同。接下来若查找到此变量，而你要是对此变量做一些不合理的操作就会报TypeError错误。</p>
+<p>在来看作用域，看如下代码：</p>
+<pre><code>function foo(a){
+    console.log(a+b);
+}
+var b=2;
+foo(2);   //4
+</code></pre><p>可以看到引擎在执行foo函数作用域内的语句console.log（a+b）时b变量并未在此作用域内，而最后还是能输出4，从上面的讲述也已经提到了当引擎未在当前作用域查找到变量就会在它的上层作用域一层层的查找。<br>而上面我们所手写的作用域叫做词法作用域，引擎在查找变量时会从内部的作用域一层层想外展开来，相应的如果内层的作用域中的变量与外层作用域声明的变量标识符一样的话，内部变量会覆盖外层的，但如果外层作用域是全局作用域可以通过<code>Window.x</code> 来访问，x为相应的变量标识符。</p>
 
       
     </div>
@@ -507,6 +515,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
 
       
       
@@ -516,18 +530,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/无Hack实现CSS三角形.html" rel="next" title="无Hack实现CSS三角形">
-                <i class="fa fa-chevron-left"></i> 无Hack实现CSS三角形
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/闭包这个玩意.html" rel="prev" title="闭包这个玩意">
-                闭包这个玩意 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/02/无Hack实现CSS三角形/" rel="prev" title="无Hack实现CSS三角形">
+                无Hack实现CSS三角形 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -599,7 +609,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
