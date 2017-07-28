@@ -3,11 +3,29 @@
 
 
     
-    
+  <url>
+    <loc>http://www.cslove.xyz/2017/07/27/ES6%E6%A8%A1%E5%9D%97%E4%B8%8ECommonJS%E6%A8%A1%E5%9D%97/</loc>
+    <lastmod>2017-07-28T02:27:35.419Z</lastmod>
+    <data>
+        <display>
+        <title>ES6模块与CommonJS模块</title>
+        <pubTime>2017-07-27T09:49:50.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文章" url="http://www.cslove.xyz/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://www.cslove.xyz/2017/07/09/%E9%97%AD%E5%8C%85%E8%BF%99%E4%B8%AA%E7%8E%A9%E6%84%8F/</loc>
-    <lastmod>2017-07-09T01:12:00.748Z</lastmod>
+    <lastmod>2017-07-27T10:20:11.294Z</lastmod>
     <data>
         <display>
         <title>闭包这个玩意</title>
@@ -24,6 +42,8 @@
     </data>
     </url>
 
+    
+    
     
   <url>
     <loc>http://www.cslove.xyz/2017/07/03/%E5%A4%A7%E4%B8%89%E6%9C%9F%E6%9C%AB%E7%9A%84%E6%80%BB%E7%BB%93%EF%BC%9A%E6%94%B9%E5%8F%98%E6%98%AF%E4%B8%80%E5%A0%82%E5%BF%85%E4%BF%AE%E8%AF%BE/</loc>
