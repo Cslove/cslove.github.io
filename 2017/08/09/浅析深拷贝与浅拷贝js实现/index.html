@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="Cslove cslove 博客 javascript html/css node.js 前端博客文章 生活随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://www.cslove.xyz/categories/index.html">
+<meta name="description" content="最近研究了下jQuery源码中extend的实现，里面涉及了深拷贝与浅拷贝，在这里简单的做个总结。 首先深浅拷贝主要是拷贝Object这种复杂类型的值，例如常见的Array，常见的Json数据，顺便提一下也可以用JSON.parse()和JSON.stringify()来进行深拷贝。 浅拷贝两个对象指向了同一块内存，修该其中的任意值，另一个值都会随之变化，这就是浅拷贝，先来看下一个简单的代码实现：">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅析深拷贝与浅拷贝js实现">
+<meta property="og:url" content="http://www.cslove.xyz/2017/08/09/浅析深拷贝与浅拷贝js实现/index.html">
 <meta property="og:site_name" content="Cslove">
-<meta property="og:description" content="Cslove cslove 博客 javascript html/css node.js 前端博客文章 生活随笔">
-<meta property="og:updated_time" content="2017-07-02T01:35:07.016Z">
+<meta property="og:description" content="最近研究了下jQuery源码中extend的实现，里面涉及了深拷贝与浅拷贝，在这里简单的做个总结。 首先深浅拷贝主要是拷贝Object这种复杂类型的值，例如常见的Array，常见的Json数据，顺便提一下也可以用JSON.parse()和JSON.stringify()来进行深拷贝。 浅拷贝两个对象指向了同一块内存，修该其中的任意值，另一个值都会随之变化，这就是浅拷贝，先来看下一个简单的代码实现：">
+<meta property="og:updated_time" content="2017-08-10T11:17:10.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="Cslove cslove 博客 javascript html/css node.js 前端博客文章 生活随笔">
+<meta name="twitter:title" content="浅析深拷贝与浅拷贝js实现">
+<meta name="twitter:description" content="最近研究了下jQuery源码中extend的实现，里面涉及了深拷贝与浅拷贝，在这里简单的做个总结。 首先深浅拷贝主要是拷贝Object这种复杂类型的值，例如常见的Array，常见的Json数据，顺便提一下也可以用JSON.parse()和JSON.stringify()来进行深拷贝。 浅拷贝两个对象指向了同一块内存，修该其中的任意值，另一个值都会随之变化，这就是浅拷贝，先来看下一个简单的代码实现：">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cslove.xyz/categories/"/>
+  <link rel="canonical" href="http://www.cslove.xyz/2017/08/09/浅析深拷贝与浅拷贝js实现/"/>
 
 
 
 
 
-  <title>categories | Cslove</title>
+  <title>浅析深拷贝与浅拷贝js实现 | Cslove</title>
   
 
 
@@ -300,25 +301,253 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cslove.xyz/2017/08/09/浅析深拷贝与浅拷贝js实现/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cslove">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cslove">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 2 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">浅析深拷贝与浅拷贝js实现</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T21:28:23+08:00">
+                2017-08-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术文章/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文章</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/08/09/浅析深拷贝与浅拷贝js实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/08/09/浅析深拷贝与浅拷贝js实现/" class="leancloud_visitors" data-flag-title="浅析深拷贝与浅拷贝js实现">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,288
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术文章/">技术文章</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活随笔/">生活随笔</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近研究了下jQuery源码中extend的实现，里面涉及了深拷贝与浅拷贝，在这里简单的做个总结。</p>
+<p>首先深浅拷贝主要是拷贝Object这种复杂类型的值，例如常见的Array，常见的Json数据，顺便提一下也可以用<code>JSON.parse()</code>和<code>JSON.stringify()</code>来进行深拷贝。</p>
+<h1 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h1><p>两个对象指向了同一块内存，修该其中的任意值，另一个值都会随之变化，这就是浅拷贝，先来看下一个简单的代码实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a =&#123; </div><div class="line">	<span class="attr">name</span>:<span class="string">"niaho"</span></div><div class="line">	&#125;;</div><div class="line"><span class="keyword">var</span> b =a;</div><div class="line">b.name = <span class="string">'hello'</span>;</div><div class="line"><span class="built_in">console</span>.log(a.name,b.name)  <span class="comment">// hello hello</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>可以看到改变b的name属性值，相应的a的name属性值也改变了，这就是浅拷贝，这种针对对象的赋值都是引用传递，有一个新方法也可以实现这种钱拷贝，<code>Object.assign()</code>用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">	<span class="attr">c</span>:<span class="number">1</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">e</span>:&#123;<span class="attr">foo</span>:<span class="number">3</span>,<span class="attr">bar</span>:<span class="number">4</span>&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> aa = &#123;</div><div class="line">	<span class="attr">c</span>:<span class="number">3</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">4</span>,</div><div class="line">	<span class="attr">e</span>:&#123;<span class="attr">fee</span>:<span class="number">5</span>,<span class="attr">baz</span>:<span class="number">6</span>&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> src = <span class="built_in">Object</span>.assign(a,aa);</div><div class="line"><span class="built_in">console</span>.log(src)  <span class="comment">// &#123;c:3,b:4,e:&#123;fee:5,baz:6&#125;&#125;</span></div></pre></td></tr></table></figure><br>可以看到e是一个引用类型的值，<code>Object.assign()</code>也只是拷贝了那个引用值，所以它也就只能用与拷贝或是合并对象。在下面会说下Jquery的extend中浅拷贝的实现</p>
+<h1 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h1><p>下面来说下复杂点的深拷贝，如果给b放到新的内存中，将a的各个属性都复制到新内存里，就是深拷贝。<br>也就是说，当b中的属性有变化的时候，a内的属性不会发生变化。首先用jQuery中的extend来拷贝上面的例子看下与浅拷贝有什么不一样的地方：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">	<span class="attr">c</span>:<span class="number">1</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">e</span>:&#123;<span class="attr">foo</span>:<span class="number">3</span>,<span class="attr">bar</span>:<span class="number">4</span>&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> aa = &#123;</div><div class="line">	<span class="attr">c</span>:<span class="number">3</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">4</span>,</div><div class="line">	<span class="attr">e</span>:&#123;<span class="attr">fee</span>:<span class="number">5</span>,<span class="attr">baz</span>:<span class="number">6</span>&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> src = $.extend(<span class="literal">true</span>,a,aa);</div><div class="line"><span class="built_in">console</span>.log(src)  <span class="comment">// &#123;c:3,b:4,e:&#123;foo:3,bar:4,fee:5,baz:6&#125;&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> content = $.extend(a,aa);</div><div class="line"><span class="built_in">console</span>.log(content)  <span class="comment">// &#123;c:3,b:4,e:&#123;fee:5,baz:6&#125;&#125;</span></div><div class="line"></div></pre></td></tr></table></figure><br>jQuery.extend( [deep ], target, object1 [, objectN ] )，其中deep为Boolean类型，如果是true，则进行深拷贝,如果是false就是浅拷贝。通过上面的对比我们就可以看到当使用extend()进行深拷贝的时候，对象的所有属性都添加到target中了。像之前说的我们也可以用JSON的parse和stringify方法简单的实现上面的拷贝：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;</div><div class="line">	<span class="attr">c</span>:<span class="number">1</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">e</span>:&#123;<span class="attr">foo</span>:<span class="number">3</span>,<span class="attr">bar</span>:<span class="number">4</span>&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> src = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</div><div class="line">src.c = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(src,a)  <span class="comment">// &#123;b:2,c:2,e:&#123;bar:4,foo:3&#125;&#125; &#123;b:2,c:1,e:&#123;bar:4,foo:3&#125;&#125;</span></div><div class="line"></div></pre></td></tr></table></figure><br>可以看到将拷贝后的src对象改变它的c属性值影响不到a里面的c值了，完全是两个对象。但这个方法有局限性，它拷贝的只能是JSON结构的数据，有些对象的属性值是一个function函数，它就拷贝不了了，而jQuery的extend方法就都可以，下面我们来看下jQuery的extend方法源码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">jQuery.extend = jQuery.fn.extend = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> options, name, src, copy, copyIsArray, clone,</div><div class="line">        target = <span class="built_in">arguments</span>[ <span class="number">0</span> ] || &#123;&#125;,</div><div class="line">        i = <span class="number">1</span>,</div><div class="line">        length = <span class="built_in">arguments</span>.length,</div><div class="line">        deep = <span class="literal">false</span>;</div><div class="line"> </div><div class="line">    <span class="comment">// Handle a deep copy situation</span></div><div class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> target === <span class="string">"boolean"</span> ) &#123;</div><div class="line">        deep = target;</div><div class="line"> </div><div class="line">        <span class="comment">// Skip the boolean and the target</span></div><div class="line">        target = <span class="built_in">arguments</span>[ i ] || &#123;&#125;;</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="comment">// Handle case when target is a string or something (possible in deep copy)</span></div><div class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> target !== <span class="string">"object"</span> &amp;&amp; !jQuery.isFunction( target ) ) &#123;</div><div class="line">        target = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="comment">// Extend jQuery itself if only one argument is passed</span></div><div class="line">    <span class="keyword">if</span> ( i === length ) &#123;</div><div class="line">        target = <span class="keyword">this</span>;</div><div class="line">        i--;</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="keyword">for</span> ( ; i &lt; length; i++ ) &#123;</div><div class="line"> </div><div class="line">        <span class="comment">// Only deal with non-null/undefined values</span></div><div class="line">        <span class="keyword">if</span> ( ( options = <span class="built_in">arguments</span>[ i ] ) != <span class="literal">null</span> ) &#123;</div><div class="line"> </div><div class="line">            <span class="comment">// Extend the base object</span></div><div class="line">            <span class="keyword">for</span> ( name <span class="keyword">in</span> options ) &#123;</div><div class="line">                src = target[ name ];</div><div class="line">                copy = options[ name ];</div><div class="line"> </div><div class="line">                <span class="comment">// Prevent never-ending loop</span></div><div class="line">                <span class="keyword">if</span> ( target === copy ) &#123;</div><div class="line">                    <span class="keyword">continue</span>;</div><div class="line">                &#125;</div><div class="line"> </div><div class="line">                <span class="comment">// Recurse if we're merging plain objects or arrays</span></div><div class="line">                <span class="keyword">if</span> ( deep &amp;&amp; copy &amp;&amp; ( jQuery.isPlainObject( copy ) || ( copyIsArray = <span class="built_in">Array</span>.isArray( copy ) ) ) ) &#123;</div><div class="line"> </div><div class="line">                    <span class="keyword">if</span> ( copyIsArray ) &#123;</div><div class="line">                        copyIsArray = <span class="literal">false</span>;</div><div class="line">                        clone = src &amp;&amp; <span class="built_in">Array</span>.isArray( src ) ? src : [];</div><div class="line"> </div><div class="line">                    &#125; <span class="keyword">else</span> &#123;</div><div class="line">                        clone = src &amp;&amp; jQuery.isPlainObject( src ) ? src : &#123;&#125;;</div><div class="line">                    &#125;</div><div class="line"> </div><div class="line">                    <span class="comment">// Never move original objects, clone them</span></div><div class="line">                    target[ name ] = jQuery.extend( deep, clone, copy );</div><div class="line"> </div><div class="line">                <span class="comment">// Don't bring in undefined values</span></div><div class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> ( copy !== <span class="literal">undefined</span> ) &#123;</div><div class="line">                    target[ name ] = copy;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// Return the modified object</span></div><div class="line">    <span class="keyword">return</span> target;</div><div class="line">&#125;;</div></pre></td></tr></table></figure><br>看着有点长，我们一步步来进行解剖，首先它取得了第一个参数值并把它赋值给了<code>target</code>变量，并判断它是否是一个布尔值，如果是的话就把它赋值给deep变量，也就是我们前面所说的那个deep，然后取得了第二个参数的值赋值给target，否则的话就直接判断target是对象还是函数，都不是的话就置为一个<code>{}</code>，接下来就是判断如果extend参数只有一个参数值就把jquery本身赋值给target，接下来就是一个for循环遍历给extend传递的参数对象，src是最终要返回的对象的属性值，而copy是被复制的对象的属性值，再就是判断deep变量进行深浅拷贝的问题如果是浅拷贝就直接把copy赋值给<code>target[name]</code>并返回target，主要就是里面的深拷贝，它进一步判断copy是不是一个对象或者数组，也就是我们前面说的要被复制的对象的属性值是一个引用类型的值，就把src赋给clone变量在递归调用extend方法并将clone和copy当为参数传递进去，也就是将引用类型的值当为一个新对象在进行拆解拷贝，最后返回target就是深拷贝后的值了</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>哎哟~看我这么努力 赏一个嘛</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.png" alt="cslove WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/ali.jpg" alt="cslove Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/ES6模块与CommonJS模块/" rel="next" title="ES6模块与CommonJS模块">
+                <i class="fa fa-chevron-left"></i> ES6模块与CommonJS模块
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -327,6 +556,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -346,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/tx.jpg"
@@ -429,6 +673,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浅拷贝"><span class="nav-number">1.</span> <span class="nav-text">浅拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深拷贝"><span class="nav-number">2.</span> <span class="nav-text">深拷贝</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -554,10 +814,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
